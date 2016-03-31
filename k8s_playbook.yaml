@@ -1,0 +1,8 @@
+- name: deploy k8s artifacts
+  hosts: kubernetes
+  tasks:
+    - name: copy atifacts
+      copy: src=files/ dest=/root/docker_bday_k8s_artifacts/
+
+    - name: deploy k8s app
+      kubernetes: k8s_config_path="/root/docker_bday_k8s_artifacts/"

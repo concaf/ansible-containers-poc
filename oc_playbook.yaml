@@ -1,0 +1,8 @@
+- name: deploy oc artifacts
+  hosts: openshift
+  tasks:
+    - name: copy atifacts
+      copy: src=files/ dest=/root/docker_bday_oc_artifacts/
+
+    - name: deploy oc app
+      openshift: oc_config_path="/root/docker_bday_oc_artifacts/"

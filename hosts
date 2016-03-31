@@ -1,0 +1,12 @@
+docker ansible_ssh_host=192.168.33.10 ansible_ssh_pass=vagrant
+kubernetes ansible_ssh_host=192.168.33.20 ansible_ssh_pass=vagrant
+openshift ansible_ssh_host=192.168.33.30 ansible_ssh_pass=vagrant
+
+[docker]
+docker
+
+[kubernetes]
+kubernetes
+
+[openshift]
+openshift

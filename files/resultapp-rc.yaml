@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: resultapp
+spec:
+  template:
+    metadata:
+      labels:
+        app: resultapp
+        tier: frontend
+    spec:
+      containers:
+      - name: resultapp
+        image: surajd/resultapp
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
